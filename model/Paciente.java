@@ -6,9 +6,19 @@ public class Paciente extends Pessoa {
     private String endereco;
     public Paciente(int id, String nome, String telefone, String email, String cpf,
         String dataNascimento, String endereco){
-            super(id, nome, telefone, email);
+            super();
             this.cpf = cpf;
             this.dataNascimento = dataNascimento;
-            this.
+            this.endereco = endereco;
+    }
+
+    @Override
+    public String getDados(){
+        return "Paciente: " + getNome() +
+        "\nCPF: " + this.cpf +
+        "\n Data de Nascimento: " + this.dataNascimento +
+        "\nTelefone: " + getTelefone() +
+        "\nEmail: " + getEmail() +
+        "\nEndereço: " + this.endereco;
     }
 }
