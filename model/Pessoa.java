@@ -6,7 +6,18 @@ public abstract class Pessoa {
     private String telefone;
     private String email;
 
-    public String getDados(){
-        return 
+    public Pessoa(){
+        this.id = id;
+        this.nome = nome;
+        this.telefone = telefone;
+        this.email = email;
     }
+
+   public int getId(){
+        return id;
+   }
+   public String getNome(){
+        return nome;
+   }
+   public
 }
