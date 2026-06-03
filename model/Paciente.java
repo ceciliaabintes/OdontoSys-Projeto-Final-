@@ -11,6 +11,12 @@ public class Paciente extends Pessoa {
             this.dataNascimento = dataNascimento;
             this.endereco = endereco;
     }
+    public void AtualizarCadastro(String novoNome,String novoTelefone, String novoEmail, String novoEndereco ){
+            setNome(novoNome);
+            setTelefone(novoTelefone);
+            setEmail(novoEmail);
+            setNome(novoEndereco);
+    }
 
     @Override
     public String getDados(){
