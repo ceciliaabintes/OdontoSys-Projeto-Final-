@@ -19,10 +19,15 @@ public class Consulta {
         this.status = "Pendente";
     }
 
-    public void agendar(Paciente p, Dentista d){
+    public void agendar(Paciente p, Dentista d, Horario h){
+            if(!h.di){
+
+            }
         this.dentista = d;
         this.paciente = p;
+        this.horario = h;
         this.status = "Agendada";
+        h.disponivel() = false;
     }
     public void cancelar(){
         return ;

@@ -17,6 +17,7 @@ public class Horario {
     public String getData(){
         return diaSemana;
     }
+    public 
     @Override
     public String toString(){
         return  "Início: " + horaInicio + "-" + "Fim: " + horaFim +
