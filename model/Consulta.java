@@ -4,7 +4,7 @@ public class Consulta {
     private int idConsulta;
     private String dataHora;
     private String tipoConsulta;
-    private String Status;
+    private String status;
     private String observacoes;
 
     private Paciente paciente;
@@ -15,6 +15,12 @@ public class Consulta {
         this.dataHora = dataHora;
         this.tipoConsulta = tipoConsulta;
         this.observacoes = observacoes;
-        this.Status = "Pendente";
+        this.status = "Pendente";
+    }
+
+    public void agendar(Paciente p, Dentista d){
+        this.dentista = d;
+        this.paciente = p;
+        this.status = "Agendada";
     }
 }
