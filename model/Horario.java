@@ -19,6 +19,11 @@ public class Horario {
     }
     @Override
     public String toString(){
-        return  + "-" + ;
+        return  "Início: " + horaInicio + "-" + "Fim: " + horaFim +
+        "\nDia: " + diaSemana;
+    }
+    public 
+    public void liberar(){
+        this.disponivel = true;
     }
 }
