@@ -15,5 +15,17 @@ public class Dentista extends Pessoa {
             this.horarios = new ArrayList();
         }
 
+        public void definirHorario (Horario h){
+            horarios.add(h);
+        }
+
+        @Override
+        public String getDados(){
+            return "Dentista: " + getNome() +
+            "\nCRO: " + cro +
+            "\nEspecialidade: " + especialidade +
+            "\nTelefone: " + getTelefone() +
+            "\nEmail: " + getEmail();
+        }
         
 }
