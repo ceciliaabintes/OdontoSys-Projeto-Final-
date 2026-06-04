@@ -22,7 +22,10 @@ public class Horario {
         return  "Início: " + horaInicio + "-" + "Fim: " + horaFim +
         "\nDia: " + diaSemana;
     }
-    public 
+    public void bloquear(){
+        this.disponivel = false;
+    }
+
     public void liberar(){
         this.disponivel = true;
     }
