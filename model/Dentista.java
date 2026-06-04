@@ -27,5 +27,8 @@ public class Dentista extends Pessoa {
             "\nTelefone: " + getTelefone() +
             "\nEmail: " + getEmail();
         }
-        
+      
+        public List<Horario> getHorarios(){
+            return horarios;
+        }
 }
