@@ -9,6 +9,7 @@ public class Consulta {
 
     private Paciente paciente;
     private Dentista dentista;
+    private Horario horario;
 
     public Consulta(int idConsulta, String dataHora, String tipoConsulta, String observacoes){
         this.idConsulta = idConsulta;
@@ -22,5 +23,8 @@ public class Consulta {
         this.dentista = d;
         this.paciente = p;
         this.status = "Agendada";
+    }
+    public void cancelar(){
+        return ;
     }
 }

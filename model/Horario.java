@@ -1,19 +1,24 @@
 package model;
 
 public class Horario {
-    private String data;
-    private String hora;
+    private int idHorario;
+    private String diaSemana;
+    private String horaInicio;
+    private String horaFim;
+    private boolean disponivel;
 
-    public Horario(String data, String hora){
-        this.data = data;
-        this.hora = hora;
+    public Horario(String diaSemana, String horaInicio, String horaFim, boolean disponivel){
+        this.diaSemana = diaSemana;
+        this.horaInicio = horaInicio;
+        this.horaFim = horaFim;
+        this.disponivel = disponivel;
     }
 
     public String getData(){
-        return data;
+        return diaSemana;
     }
     @Override
     public String toString(){
-        return data + "-" + hora;
+        return  + "-" + ;
     }
 }
