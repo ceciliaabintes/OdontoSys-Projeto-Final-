@@ -9,5 +9,11 @@ public class Horario {
         this.hora = hora;
     }
 
-    
+    public String getData(){
+        return data;
+    }
+    @Override
+    public String toString(){
+        return data + "-" + hora;
+    }
 }
