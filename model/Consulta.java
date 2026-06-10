@@ -33,6 +33,13 @@ public class Consulta {
     }
     public void cancelar(){
         this.status = "Cancelado";
+
+        if(horario!= null){
+            horario.liberar();
+        }
         return ;
+    }
+    public void confirmar(){
+        this.status = "Confirmada";
     }
 }
