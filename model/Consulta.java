@@ -20,16 +20,19 @@ public class Consulta {
     }
 
     public void agendar(Paciente p, Dentista d, Horario h){
-            if(!h.di){
-
+            if(!h.isDisponivel()){
+                System.out.println("Horário Indisponível");
+                return; 
             }
         this.dentista = d;
         this.paciente = p;
         this.horario = h;
+        h.bloquear(); 
+
         this.status = "Agendada";
-        h.disponivel() = false;
     }
     public void cancelar(){
+        this.status = "Cancelado";
         return ;
     }
 }

@@ -17,14 +17,16 @@ public class Horario {
     public String getData(){
         return diaSemana;
     }
-    public 
+    public boolean isDisponivel(){
+        return true;
+    }
     @Override
     public String toString(){
         return  "Início: " + horaInicio + "-" + "Fim: " + horaFim +
         "\nDia: " + diaSemana;
     }
     public void bloquear(){
-        this.disponivel = false;
+       this.disponivel = false;
     }
 
     public void liberar(){
