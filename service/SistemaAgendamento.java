@@ -4,6 +4,9 @@ import java.util.List;
 
 import model.Consulta;
 import model.Pessoa;
+import model.Horario;
+import model.Paciente;
+import model.Dentista;
 
 public class SistemaAgendamento {
     private List<Pessoa> pessoas;
@@ -16,6 +19,14 @@ public class SistemaAgendamento {
 
     public void iniciar(){
 
+    }
+
+    public void adicionarPessoa(Pessoa pessoa){
+        pessoas.add(pessoa);
+    }
+
+    public void adicionarConsultas(Consulta consulta){
+        consultas.add(consulta);
     }
 
     public void gerenciarConsultas(){
