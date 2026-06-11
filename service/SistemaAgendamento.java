@@ -19,7 +19,9 @@ public class SistemaAgendamento {
     }
 
     public void gerenciarConsultas(){
-        
+        for(Consulta consulta : consultas){
+            System.out.println(consulta);
+        }
     }
     public void listarPessoas(){
         for(Pessoa pessoa : pessoas){

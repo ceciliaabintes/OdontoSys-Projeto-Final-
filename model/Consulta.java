@@ -20,10 +20,6 @@ public class Consulta {
     }
 
     public void agendar(Paciente p, Dentista d, Horario h){
-            if(!h.isDisponivel()){
-                System.out.println("Horário Indisponível");
-                return; 
-            }
         this.dentista = d;
         this.paciente = p;
         this.horario = h;
