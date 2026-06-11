@@ -1,6 +1,6 @@
 package service;
 
-public class ValidadorHorario implements IValidador {
+public class ValidadorPaciente implements IValidador{
     @Override
     public boolean validar(){
         return true;
