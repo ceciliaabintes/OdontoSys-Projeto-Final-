@@ -11,10 +11,12 @@ import model.Dentista;
 public class SistemaAgendamento {
     private List<Pessoa> pessoas;
     private List<Consulta> consultas;
+    private List<IValidador> validadores;
 
     public SistemaAgendamento(){
         pessoas = new ArrayList<>();
         consultas = new ArrayList<>();
+        validadores = new ArrayList<>();
     }
 
     public void iniciar(){
@@ -38,5 +40,10 @@ public class SistemaAgendamento {
         for(Pessoa pessoa : pessoas){
             System.out.println(pessoa.getDados());
         }
+    }
+
+    public boolean agendarConsulta(Consulta consulta, Paciente paciente, Dentista dentista, Horario horario){
+        validadores.clear();
+        validadores.add(new ValidadorPaciente(paciente));
     }
 }
