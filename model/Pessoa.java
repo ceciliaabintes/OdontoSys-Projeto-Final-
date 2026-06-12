@@ -6,7 +6,7 @@ public abstract class Pessoa {
     private String telefone;
     private String email;
 
-    public Pessoa(){
+    public Pessoa(int id, String nome, String telefone, String email){
         this.id = id;
         this.nome = nome;
         this.telefone = telefone;

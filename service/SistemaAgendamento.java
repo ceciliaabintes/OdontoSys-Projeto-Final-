@@ -54,5 +54,6 @@ public class SistemaAgendamento {
             }
         consulta.agendar(paciente, dentista, horario);
         consultas.add(consulta);
+        return true;
     }
 }
