@@ -7,6 +7,9 @@ public class ValidadorHorario implements IValidador {
     }
     @Override
     public boolean validar(){
-        
+        if (horario == null){
+            return false;
+        }
+        return horario.isDisponivel();
     }
 }
