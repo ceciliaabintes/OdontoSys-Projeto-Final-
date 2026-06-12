@@ -45,5 +45,6 @@ public class SistemaAgendamento {
     public boolean agendarConsulta(Consulta consulta, Paciente paciente, Dentista dentista, Horario horario){
         validadores.clear();
         validadores.add(new ValidadorPaciente(paciente));
+        validadores.add(new ValidadorHorario(horario));
     }
 }
