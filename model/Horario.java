@@ -18,7 +18,7 @@ public class Horario {
         return diaSemana;
     }
     public boolean isDisponivel(){
-        return true;
+        return disponivel;
     }
     @Override
     public String toString(){

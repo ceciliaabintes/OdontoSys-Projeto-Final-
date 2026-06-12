@@ -9,10 +9,10 @@ public class Dentista extends Pessoa {
 
         public Dentista(int id, String nome, String telefone, String email,
             String cro, String especialidade){
-            super();
+            super(id, nome, telefone, email);
             this.cro = cro;
             this.especialidade = especialidade;
-            this.horarios = new ArrayList();
+            this.horarios = new ArrayList<>();
         }
 
         public void definirHorario (Horario h){

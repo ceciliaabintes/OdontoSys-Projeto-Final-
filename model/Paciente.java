@@ -6,7 +6,7 @@ public class Paciente extends Pessoa {
     private String endereco;
     public Paciente(int id, String nome, String telefone, String email, String cpf,
         String dataNascimento, String endereco){
-            super();
+            super(id, nome, telefone, email);
             this.cpf = cpf;
             this.dataNascimento = dataNascimento;
             this.endereco = endereco;
@@ -15,7 +15,7 @@ public class Paciente extends Pessoa {
             setNome(novoNome);
             setTelefone(novoTelefone);
             setEmail(novoEmail);
-            setNome(novoEndereco);
+            this.endereco = novoEndereco;
     }
 
     @Override
