@@ -33,7 +33,6 @@ public class Consulta {
         if(horario!= null){
             horario.liberar();
         }
-        return ;
     }
     public void confirmar(){
         this.status = "Confirmada";

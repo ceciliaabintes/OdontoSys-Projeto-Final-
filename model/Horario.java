@@ -7,7 +7,8 @@ public class Horario {
     private String horaFim;
     private boolean disponivel;
 
-    public Horario(String diaSemana, String horaInicio, String horaFim, boolean disponivel){
+    public Horario(int idHorario, String diaSemana, String horaInicio, String horaFim, boolean disponivel){
+        this.idHorario = idHorario;
         this.diaSemana = diaSemana;
         this.horaInicio = horaInicio;
         this.horaFim = horaFim;
