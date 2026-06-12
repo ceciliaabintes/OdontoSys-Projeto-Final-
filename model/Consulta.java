@@ -40,7 +40,13 @@ public class Consulta {
     public String getStatus(){
         return status;
     }
-    public Paciente gPaciente(){
-        
+    public Paciente getPaciente(){
+        return paciente;
+    }
+    public Dentista geteDentista(){
+        return dentista;
+    }
+    public Horario getHorario(){
+        return horario;
     }
 }
