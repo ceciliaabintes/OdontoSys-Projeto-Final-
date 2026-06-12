@@ -37,4 +37,10 @@ public class Consulta {
     public void confirmar(){
         this.status = "Confirmada";
     }
+    public String getStatus(){
+        return status;
+    }
+    public Paciente gPaciente(){
+        
+    }
 }
