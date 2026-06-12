@@ -46,5 +46,13 @@ public class SistemaAgendamento {
         validadores.clear();
         validadores.add(new ValidadorPaciente(paciente));
         validadores.add(new ValidadorHorario(horario));
+            for(IValidador validador : validadores){
+                if (!validador.validar()) {
+                    System.out.println("Falha na validação");
+                    return false;
+                }
+            }
+        consulta.agendar(paciente, dentista, horario);
+        consultas.add(consulta);
     }
 }
