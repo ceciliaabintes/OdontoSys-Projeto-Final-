@@ -1,9 +1,11 @@
 package model;
-
+/*Classe Paciente que herda a classe pessoa */
 public class Paciente extends Pessoa {
+/*Atributos da classe Paciente */
     private String cpf;
     private String dataNascimento;
     private String endereco;
+/*Construtor da classe Paciente */
     public Paciente(int id, String nome, String telefone, String email, String cpf,
         String dataNascimento, String endereco){
             super(id, nome, telefone, email);
@@ -11,14 +13,16 @@ public class Paciente extends Pessoa {
             this.dataNascimento = dataNascimento;
             this.endereco = endereco;
     }
+/*Método para atualizar cadastro */
     public void AtualizarCadastro(String novoNome,String novoTelefone, String novoEmail, String novoEndereco ){
             setNome(novoNome);
             setTelefone(novoTelefone);
             setEmail(novoEmail);
             this.endereco = novoEndereco;
     }
-
+/*Sobreescrita do método getDados para atender as particularidades da Classe Paciente */
     @Override
+/*Método de retorno das informações de paciente */
     public String getDados(){
         return "Paciente: " + getNome() +
         "\nCPF: " + this.cpf +
