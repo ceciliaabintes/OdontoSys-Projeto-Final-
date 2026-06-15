@@ -15,6 +15,9 @@ public class Dentista extends Pessoa {
             if(cro == null || cro.isBlank()){
                 throw new IllegalArgumentException("CRO inválido");
             }
+            if(especialidade == null || especialidade.isBlank()){
+                throw new IllegalArgumentException("Especialidade é obrigatória");
+            }
             this.cro = cro;
             this.especialidade = especialidade;
             this.horarios = new ArrayList<>();
