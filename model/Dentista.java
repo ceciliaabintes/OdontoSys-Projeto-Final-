@@ -11,6 +11,10 @@ public class Dentista extends Pessoa {
         public Dentista(int id, String nome, String telefone, String email,
             String cro, String especialidade){
             super(id, nome, telefone, email);
+            //Tratamento de exceções
+            if(cro == null || cro.isBlank()){
+                throw new IllegalArgumentException("CRO inválido");
+            }
             this.cro = cro;
             this.especialidade = especialidade;
             this.horarios = new ArrayList<>();
