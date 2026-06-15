@@ -47,10 +47,22 @@ public class Consulta {
     public Paciente getPaciente(){
         return paciente;
     }
-    public Dentista geteDentista(){
+    public Dentista getDentista(){
         return dentista;
     }
     public Horario getHorario(){
         return horario;
+    }
+    public int getIdConsulta(){
+        return idConsulta;
+    }
+    public String getDataHora(){
+        return dataHora; 
+    }
+    public String getTipoConsulta(){
+        return tipoConsulta;
+    }
+    public String getObservacoes(){
+        return observacoes;
     }
 }
