@@ -15,6 +15,13 @@ public class Dentista extends Pessoa {
             this.especialidade = especialidade;
             this.horarios = new ArrayList<>();
         }
+/*Metodos getters para retorno de informações */
+        public String getCro(){
+                return cro;
+        }
+        public String getEspecialidade(){
+                return especialidade;
+        }
 /*Método para o Dentista definir os horários de atendimento*/
         public void definirHorario (Horario h){
             horarios.add(h);
