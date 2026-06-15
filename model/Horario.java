@@ -19,6 +19,18 @@ public class Horario {
     public String getData(){
         return diaSemana;
     }
+    public int getIdHorario(){
+        return idHorario;
+    }
+    public String getDiaSemana(){
+        return diaSemana;
+    }
+    public String getHoraInicio(){
+        return horaInicio;
+    }
+    public String getHoraFim(){
+        return horaFim;
+    }
 /*Método de verificação de disponibilidade do horário */
     public boolean isDisponivel(){
         return disponivel;
