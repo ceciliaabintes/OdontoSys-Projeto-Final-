@@ -39,8 +39,11 @@ public class Horario {
     @Override
 /*Método de retorno das informações concatenadas e formatadas */
     public String toString(){
-        return  "Início: " + horaInicio + "-" + "Fim: " + horaFim +
-        "\nDia: " + diaSemana;
+        return "Posição: " + idHorario +
+        "\nDia: " + diaSemana + 
+        "\nInício: " + horaInicio +
+        "\nFim: " + horaFim +
+        "\nDisponivel" + disponivel;
     }
 /*Método para bloquear o horario */
     public void bloquear(){
