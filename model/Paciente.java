@@ -14,15 +14,25 @@ public class Paciente extends Pessoa {
             this.endereco = endereco;
     }
 /*Método para atualizar cadastro */
-    public void AtualizarCadastro(String novoNome,String novoTelefone, String novoEmail, String novoEndereco ){
+    public void atualizarCadastro(String novoNome,String novoTelefone, String novoEmail, String novoEndereco ){
             setNome(novoNome);
             setTelefone(novoTelefone);
             setEmail(novoEmail);
             this.endereco = novoEndereco;
     }
+ /*Metodos getters(retorno de informações) */
+    public String getCpf(){
+        return cpf;
+    }
+    public String getDataNascimento(){
+        return dataNascimento;
+    }
+    public getEndereco(){
+        return endereco;
+    }
 /*Sobreescrita do método getDados para atender as particularidades da Classe Paciente */
     @Override
-/*Método de retorno das informações de paciente */
+/*Método de retorno das informações de paciente concatenadas */
     public String getDados(){
         return "Paciente: " + getNome() +
         "\nCPF: " + this.cpf +
