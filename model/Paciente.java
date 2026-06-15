@@ -8,14 +8,14 @@ public class Paciente extends Pessoa {
 /*Construtor da classe Paciente */
     public Paciente(int id, String nome, String telefone, String email, String cpf,
         String dataNascimento, String endereco){
+            super(id, nome, telefone, email);
             //Tratamento de exceções
             if(cpf == null || cpf.length() !=11){
                 throw new IllegalArgumentException("CPF deve conter 11 dígitos");
             }
             if(nome == null || nome.isBlank()){
                 throw new IllegalArgumentException("Nome do paciente é obrigatório");
-            }
-            super(id, nome, telefone, email);
+            } 
             this.cpf = cpf;
             this.dataNascimento = dataNascimento;
             this.endereco = endereco;
