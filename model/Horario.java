@@ -9,6 +9,13 @@ public class Horario {
     private boolean disponivel;
 /*Construtor da Classe Horário */
     public Horario(int idHorario, String diaSemana, String horaInicio, String horaFim, boolean disponivel){
+        //Tratamento de exceções
+        if(diaSemana == null || diaSemana.isBlank()){
+            throw new IllegalArgumentException("Dia da semana inválido");
+        }
+        if(horaInicio.equals(horaFim)){
+            throw new IllegalArgumentException("Horario inicial e final não podem ser igauis");
+        }
         this.idHorario = idHorario;
         this.diaSemana = diaSemana;
         this.horaInicio = horaInicio;
