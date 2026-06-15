@@ -30,6 +30,11 @@ public class Consulta {
     }
 /*Métodos para cancelamento de Consultas */
     public void cancelar(){
+        //Tratamento de exceções
+        if(status.equals("Pendente")){
+            //Garantindo que consultas com status pendente não sejam canceladas
+            throw new IllegalArgumentException("A consulta ainda não foi agendada");
+        }
         this.status = "Cancelado";
 
         if(horario!= null){
@@ -38,6 +43,11 @@ public class Consulta {
     }
 /*Métodos para confirmação de consultas */
     public void confirmar(){
+        //Tratamento de exceções
+        if(status.equals("Cancelado")){
+            //Garantindo que mesmo cancelada uma consulta não terá possibilidade de ser confirmada
+            throw new IllegalArgumentException("Não é possível confirmar uma consulta que já foi cancelada");
+        }
         this.status = "Confirmada";
     }
 /*Métodos get para retorno de dados da classe */
