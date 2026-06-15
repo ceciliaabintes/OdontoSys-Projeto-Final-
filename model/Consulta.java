@@ -69,6 +69,10 @@ public class Consulta {
     public String toString(){
         return "Consulta nº: " + idConsulta +
         "\nPaciente: " + paciente.getNome() +
-        "\nDentista";
+        "\nDentista: " + dentista.getNome() +
+        "\nData/Hora: " + dataHora + //Talvez essa linha não esteja de acordo com a lógica de negócios verificar dps
+        "\nTipo: " + tipoConsulta +
+        "\nStatus: " + status +
+        "\nObservações: " + observacoes;
     }
 }
