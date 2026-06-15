@@ -27,7 +27,7 @@ public class Paciente extends Pessoa {
     public String getDataNascimento(){
         return dataNascimento;
     }
-    public getEndereco(){
+    public String getEndereco(){
         return endereco;
     }
 /*Sobreescrita do método getDados para atender as particularidades da Classe Paciente */
