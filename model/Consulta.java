@@ -65,4 +65,10 @@ public class Consulta {
     public String getObservacoes(){
         return observacoes;
     }
+
+    public String toString(){
+        return "Consulta nº: " + idConsulta +
+        "\nPaciente: " + paciente.getNome() +
+        "\nDentista";
+    }
 }
