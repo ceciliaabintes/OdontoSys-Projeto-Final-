@@ -22,6 +22,12 @@ public class SistemaAgendamento {
     public void iniciar(){
 
     }
+    public List<Pessoa> getPessoas(){
+        return pessoas;
+    }
+    public List<Consulta> getConsultas(){
+        return consultas;
+    }
 
     public void adicionarPessoa(Pessoa pessoa){
         pessoas.add(pessoa);
