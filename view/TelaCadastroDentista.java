@@ -26,5 +26,31 @@ public TelaCadastroDentista(SistemaAgendamento sistema){
         setLocationRelativeTo(null);
 
         setLayout(new GridLayout(7,2));
+
+        add(new JLabel("ID:"));
+        txtId = new JTextField();
+        add(txtId);
+
+        add(new JLabel("Nome:"));
+        txtNome = new JTextField();
+        add(txtNome);
+
+        add(new JLabel("Telefone:"));
+        txtTelefone = new JTextField();
+        add(txtTelefone);
+
+        add(new JLabel("Email:"));
+        txtEmail = new JTextField();
+        add(txtEmail);
+
+        add(new JLabel("CRO:"));
+        txtCro = new JTextField();
+        add(txtCro);
+
+        add(new JLabel("Especialidade:"));
+        txtEspecialidade = new JTextField();
+        add(txtEspecialidade);
+
+        
     }
 }
