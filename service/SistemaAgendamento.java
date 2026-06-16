@@ -34,6 +34,15 @@ public class SistemaAgendamento {
         }
             return pacientes;
     }
+    public List<Dentista> getDentistas(){
+        List<Dentista> dentistas = new ArrayList<>();
+            for(Pessoa pessoa : pessoas){
+                if(pessoa instanceof Dentista){
+                    dentistas.add((Dentista)pessoa);
+                }
+        }
+            return dentistas;
+    } 
     public List<Consulta> getConsultas(){
         return consultas;
     }
@@ -42,23 +51,10 @@ public class SistemaAgendamento {
         pessoas.add(pessoa);
     }
 
-    public void adicionarConsultas(Consulta consulta){
-        consultas.add(consulta);
-    }
-
-    public void gerenciarConsultas(){
-        for(Consulta consulta : consultas){
-            System.out.println(consulta);
-        }
-    }
-    public void listarPessoas(){
-        for(Pessoa pessoa : pessoas){
-            System.out.println(pessoa.getDados());
-        }
-    }
     public void adicionarHorario(Horario horario){
         horarios.add(horario);
     }
+    
     public boolean agendarConsulta(Consulta consulta, Paciente paciente, Dentista dentista, Horario horario){
         validadores.clear();
         validadores.add(new ValidadorPaciente(paciente));
