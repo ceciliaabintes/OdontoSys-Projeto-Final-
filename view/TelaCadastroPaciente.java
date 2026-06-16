@@ -63,6 +63,25 @@ public class TelaCadastroPaciente extends JFrame {
     }
 
     private void cadastrarPaciente(){
-        
+        try{
+            int id = Integer.parseInt(txtId.getText());
+
+            Paciente paciente = new Paciente(id, 
+                txtNome.getText(),
+                txtTelefone.getText(),
+                txtEmail.getText(),
+                txtCpf.getText(),
+                txtNascimento.getText(),
+                txtEndereco.getText()
+            );
+            sistema.adicionarPessoa(paciente);
+
+            JOptionPane.showMessageDialog(
+                this,
+                "Paciente cadastrado com sucesso"
+            );
+        } catch (Exception e){
+
+        }
     }
 }
