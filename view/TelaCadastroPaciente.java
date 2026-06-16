@@ -1,4 +1,6 @@
 package view;
+import java.awt.GridLayout;
+
 import javax.swing.*;
 
 import model.Paciente;
@@ -16,7 +18,13 @@ public class TelaCadastroPaciente extends JFrame {
 
     private JButton btnCadastrar;
 
-    public TelaCadastroPaciente(Sistema sistema){
+    public TelaCadastroPaciente(SistemaAgendamento sistema){
+        this.sistema = sistema;
 
+        setTitle("Cadastro Paciente");
+        setSize(400,400);
+        setLocationRelativeTo(null);
+
+        setLayout(new GridLayout(8,2));
     }
 }
