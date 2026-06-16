@@ -52,14 +52,26 @@ public class TelaCadastroHorario extends JFrame {
 
             int id = Integer.parseInt(txtId.getText());
 
-            Horario horario =
-                new Horario(
+            Horario horario = new Horario(
                     id,
                     txtDiaSemana.getText(),
                     txtHoraInicio.getText(),
                     txtHoraFim.getText(),
                     true
                 );
-        }catch
+            sistema.adicionarHorario(horario);
+            JOptionPane.showInputDialog(
+                this,
+                "Horario cadastrado com sucesso"
+            );
+
+        }catch(Exception e ){
+            JOptionPane.showMessageDialog(
+                this,
+                e.getMessage(),
+                "Erro",
+                JOptionPane.ERROR_MESSAGE
+            );
+        }
     }
 }
