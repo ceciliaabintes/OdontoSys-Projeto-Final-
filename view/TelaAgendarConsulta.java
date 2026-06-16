@@ -21,7 +21,19 @@ public class TelaAgendarConsulta extends JFrame {
     private JComboBox<Horario> cbHorario;
 
     private JButton btnAgendar;
-
+      public void carregarDados(){ 
+    for(Paciente paciente : sistema.getPacientes()){
+        cbPaciente.addItem(paciente);
+    }
+    for(Dentista dentista : sistema.getDentistas()){
+        cbDentista.addItem(dentista);
+    }
+    for(Horario horario : sistema.getHorarios()){
+            if(horario.isDisponivel()){
+                cbHorario.addItem(horario);
+            }
+        }
+    }
     public TelaAgendarConsulta(SistemaAgendamento sistema){
         this.sistema = sistema;
 
@@ -41,7 +53,7 @@ public class TelaAgendarConsulta extends JFrame {
         add(new JLabel("Dentista: "));
         cbDentista = new JComboBox<>();
         add(cbDentista);
-        add(new JLabel("Horario: "));
+        add(new JLabel("Horário: "));
         cbHorario = new JComboBox<>();
         add(cbHorario);
         add(new JLabel("Tipo Consulta"));
