@@ -22,7 +22,7 @@ public class TelaCadastroPaciente extends JFrame {
         this.sistema = sistema;
 
         setTitle("Cadastro Paciente");
-        setSize(400,400);
+        setSize(500,500);
         setLocationRelativeTo(null);
 
         setLayout(new GridLayout(8,2));
@@ -55,6 +55,7 @@ public class TelaCadastroPaciente extends JFrame {
         add(txtEndereco);
 
         add(new JLabel("Cadastrar: "));
+        btnCadastrar = new JButton("Salvar Paciente");
         add(btnCadastrar);
 
         btnCadastrar.addActionListener(e -> cadastrarPaciente());
