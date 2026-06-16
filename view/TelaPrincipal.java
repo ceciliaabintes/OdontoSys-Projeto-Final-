@@ -15,7 +15,7 @@ public class TelaPrincipal extends JFrame{
     public TelaPrincipal(SistemaAgendamento sistema){
         this.sistema = sistema;
         setTitle("OdontoSys");
-        setSize(400, 500);
+        setSize(400, 550);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
 
@@ -29,7 +29,7 @@ public class TelaPrincipal extends JFrame{
         btnDentista = new JButton("Cadastrar Dentista");
         btnHorario = new JButton("Cadastrar Horario");
         btnConsulta = new JButton("Agendar Consulta");
-        btnListar = new JButton("Cadastrar Paciente");
+        btnListar = new JButton("Listar Consultas");
         btnSair = new JButton("Sair");
 
         btnPaciente.setAlignmentX(CENTER_ALIGNMENT);
@@ -39,27 +39,32 @@ public class TelaPrincipal extends JFrame{
         btnListar.setAlignmentX(CENTER_ALIGNMENT);
         btnSair.setAlignmentX(CENTER_ALIGNMENT);
 
+        btnSair.addActionListener(e -> System.exit(0));
+        btnPaciente.addActionListener( e -> new TelaCadastroPaciente(sistema));
+
+        
+
         painel.add(Box.createVerticalStrut(20));
         painel.add(titulo);
         painel.add(Box.createVerticalStrut(20));
 
         painel.add(btnPaciente);
-        painel.add(Box.createHorizontalStrut(20));
+        painel.add(Box.createHorizontalStrut(15));
 
         painel.add(btnDentista);
-        painel.add(Box.createHorizontalStrut(10));
+        painel.add(Box.createHorizontalStrut(15));
 
         painel.add(btnHorario);
-        painel.add(Box.createHorizontalStrut(10));
+        painel.add(Box.createHorizontalStrut(15));
 
          painel.add(btnConsulta);
-        painel.add(Box.createHorizontalStrut(10));
+        painel.add(Box.createHorizontalStrut(15));
 
         painel.add(btnListar);
-        painel.add(Box.createHorizontalStrut(10));
+        painel.add(Box.createHorizontalStrut(15));
 
         painel.add(btnSair);
-        btnSair.addActionListener(e -> System.exit(0));
+
         add(painel);
         setVisible(true);
     }
