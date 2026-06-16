@@ -14,7 +14,7 @@ public class Horario {
             throw new IllegalArgumentException("Dia da semana inválido");
         }
         if(horaInicio.equals(horaFim)){
-            throw new IllegalArgumentException("Horario inicial e final não podem ser igauis");
+            throw new IllegalArgumentException("Horario inicial e final não podem ser iguais");
         }
         this.idHorario = idHorario;
         this.diaSemana = diaSemana;
