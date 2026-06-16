@@ -24,6 +24,25 @@ public class TelaCadastroHorario extends JFrame {
         setLocationRelativeTo(null);
 
         setLayout(new GridLayout(5,2));
-        
+
+        add(new JLabel("ID Horário:"));
+        txtId = new JTextField();
+        add(txtId);
+
+        add(new JLabel("Dia da Semana:"));
+        txtDiaSemana = new JTextField();
+        add(txtDiaSemana);
+
+        add(new JLabel("Hora Início:"));
+        txtHoraInicio = new JTextField();
+        add(txtHoraInicio);
+
+        add(new JLabel("Hora Fim:"));
+        txtHoraFim = new JTextField();
+        add(txtHoraFim);
+
+         btnSalvar = new JButton("Salvar Horário");
+        add(btnSalvar);
+         btnSalvar.addActionListener(e -> cadastrarHorario());
     }
 }
