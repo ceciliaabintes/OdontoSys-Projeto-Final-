@@ -14,6 +14,7 @@ public class TelaCadastroPaciente extends JFrame {
     private JTextField txtTelefone;
     private JTextField txtEmail;
     private JTextField txtCpf;
+    private JTextField txtNascimento;
     private JTextField txtEndereco;
 
     private JButton btnCadastrar;
@@ -34,5 +35,12 @@ public class TelaCadastroPaciente extends JFrame {
 
         add(new JLabel("Telefone: "));
         txtTelefone = new JTextField();
+
+        add(new JLabel("CPF: "));
+        txtCpf = new JTextField();
+
+        add(new JLabel("Nascimento: "));
+        txtNascimento = new JTextField();
+        
     }
 }
