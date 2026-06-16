@@ -1,6 +1,5 @@
 package view;
-import java.awt.GridLayout;
-
+import java.awt.*;
 import javax.swing.*;
 
 import model.Paciente;
@@ -82,6 +81,12 @@ public class TelaCadastroPaciente extends JFrame {
             );
         } catch (Exception e){
 
+                JOptionPane.showMessageDialog(
+                    this,
+                    e.getMessage(),
+                    "Erro",
+                    JOptionPane.ERROR_MESSAGE
+                );
         }
     }
 }
