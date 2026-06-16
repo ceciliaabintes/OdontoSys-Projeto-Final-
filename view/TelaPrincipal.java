@@ -11,7 +11,7 @@ public class TelaPrincipal extends JFrame{
 
     public TelaPrincipal(){
         setTitle("OdontoSys");
-        setSize(900, 700);
+        setSize(400, 500);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
 
@@ -51,9 +51,12 @@ public class TelaPrincipal extends JFrame{
          painel.add(btnConsulta);
         painel.add(Box.createHorizontalStrut(10));
 
-        
+        painel.add(btnListar);
+        painel.add(Box.createHorizontalStrut(10));
 
+        painel.add(btnSair);
         btnSair.addActionListener(e -> System.exit(0));
+        add(painel);
         setVisible(true);
     }
 }
