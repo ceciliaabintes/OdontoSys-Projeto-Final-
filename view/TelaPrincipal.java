@@ -11,11 +11,11 @@ public class TelaPrincipal extends JFrame{
 
     public TelaPrincipal(){
         setTitle("OdontoSys");
-        setSize(700, 700);
+        setSize(900, 700);
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        setLocation(null);
+        setLocationRelativeTo(null);
 
         setLayout(new GridLayout (6,1,10,10));
 
