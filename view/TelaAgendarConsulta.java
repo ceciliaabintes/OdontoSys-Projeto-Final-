@@ -30,5 +30,22 @@ public class TelaAgendarConsulta extends JFrame {
         setLocationRelativeTo(null);
 
         setLayout(new GridLayout(7,2));
+
+        add(new JLabel("ID Consulta: "));
+        txtIdConsulta = new JTextField();
+        add(txtIdConsulta);
+
+        add(new JLabel("Paciente: "));
+        cbPaciente = new JComboBox<>();
+        add(cbPaciente);
+        add(new JLabel("Dentista: "));
+        cbDentista = new JComboBox<>();
+        add(cbDentista);
+        add(new JLabel("Horario: "));
+        cbHorario = new JComboBox<>();
+        add(cbHorario);
+        add(new JLabel("Tipo Consulta"));
+        txtTipoConsulta = new JTextField();
+        add(txtTipoConsulta);
     }
 }
