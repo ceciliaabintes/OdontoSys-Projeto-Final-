@@ -12,15 +12,17 @@ public class SistemaAgendamento {
     private List<Pessoa> pessoas;
     private List<Consulta> consultas;
     private List<IValidador> validadores;
+    private List<Horario> horarios;
 
     public SistemaAgendamento(){
         pessoas = new ArrayList<>();
         consultas = new ArrayList<>();
         validadores = new ArrayList<>();
+        horarios = new ArrayList<>();
     }
 
-    public void iniciar(){
-
+    public List<Horario> getHorarios(){
+        return horarios;
     }
     public List<Pessoa> getPessoas(){
         return pessoas;
