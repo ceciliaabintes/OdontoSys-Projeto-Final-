@@ -60,7 +60,7 @@ public class TelaCadastroHorario extends JFrame {
                     true
                 );
             sistema.adicionarHorario(horario);
-            JOptionPane.showInputDialog(
+            JOptionPane.showMessageDialog(
                 this,
                 "Horario cadastrado com sucesso"
             );
