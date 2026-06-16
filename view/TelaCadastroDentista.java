@@ -69,8 +69,21 @@ public TelaCadastroDentista(SistemaAgendamento sistema){
                 txtCro.getText(),
                 txtEspecialidade.getText()
             );
-        }catch (Exception e){
 
+            sistema.adicionarPessoa(dentista);
+
+            JOptionPane.showMessageDialog(
+                this,
+                "Dentista cadastrado com sucesso"
+            );
+        }catch (Exception e){
+            JOptionPane.showMessageDialog(
+                JOptionPane.showMessageDialog(this,
+                    e.getMessage(),
+                    "Erro",
+                    JOptionPane.ERROR_MESSAGE
+                );
+            );
         }
     }
 }
