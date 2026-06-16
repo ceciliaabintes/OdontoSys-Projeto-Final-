@@ -49,7 +49,9 @@ public class SistemaAgendamento {
             System.out.println(pessoa.getDados());
         }
     }
-
+    public void adicionarHorario(Horario horario){
+        horarios.add(horario);
+    }
     public boolean agendarConsulta(Consulta consulta, Paciente paciente, Dentista dentista, Horario horario){
         validadores.clear();
         validadores.add(new ValidadorPaciente(paciente));
