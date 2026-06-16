@@ -26,5 +26,13 @@ public class TelaCadastroPaciente extends JFrame {
         setLocationRelativeTo(null);
 
         setLayout(new GridLayout(8,2));
+        add(new JLabel("ID: "));
+        txtId = new JTextField();
+
+        add(new JLabel("Nome: "));
+        txtNome = new JTextField();
+
+        add(new JLabel("Telefone: "));
+        txtTelefone = new JTextField();
     }
 }
