@@ -59,6 +59,18 @@ public TelaCadastroDentista(SistemaAgendamento sistema){
          setVisible(true);
     }
     private void cadastrarDentista(){
+        try{
+            int id = Integer.parseInt(txtId.getText());
 
+            Dentista dentista = new Dentista (id, 
+                txtNome.getText(),
+                txtTelefone.getText(),
+                txtEmail.getText(),
+                txtCro.getText(),
+                txtEspecialidade.getText()
+            );
+        }catch (Exception e){
+
+        }
     }
 }
