@@ -19,4 +19,16 @@ public class TelaAgendarConsulta extends JFrame {
     private JComboBox<Paciente> cbPaciente;
     private JComboBox<Dentista> cbDentista;
     private JComboBox<Horario> cbHorario;
+
+    private JButton btnAgendar;
+
+    public TelaAgendarConsulta(SistemaAgendamento sistema){
+        this.sistema = sistema;
+
+        setTitle("Agendamento de Consulta");
+        setSize(500, 400);
+        setLocationRelativeTo(null);
+
+        setLayout(new GridLayout(7,2));
+    }
 }
