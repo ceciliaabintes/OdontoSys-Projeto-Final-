@@ -44,5 +44,22 @@ public class TelaCadastroHorario extends JFrame {
          btnSalvar = new JButton("Salvar Horário");
         add(btnSalvar);
          btnSalvar.addActionListener(e -> cadastrarHorario());
+
+         setVisible(true);
+    }
+    private void cadastrarHorario(){
+        try{
+
+            int id = Integer.parseInt(txtId.getText());
+
+            Horario horario =
+                new Horario(
+                    id,
+                    txtDiaSemana.getText(),
+                    txtHoraInicio.getText(),
+                    txtHoraFim.getText(),
+                    true
+                );
+        }catch
     }
 }
