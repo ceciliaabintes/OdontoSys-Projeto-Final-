@@ -14,4 +14,17 @@ public class TelaCadastroDentista extends JFrame{
     private JTextField txtEmail;
     private JTextField txtCro;
     private JTextField txtEspecialidade;
+
+    private JButton btnSalvar;
+
+public TelaCadastroDentista(SistemaAgendamento sistema){
+        this.sistema = sistema;
+
+        setTitle("Cadastro Dentista");
+        setSize(500,350);
+
+        setLocationRelativeTo(null);
+
+        setLayout(new GridLayout(7,2));
+    }
 }
