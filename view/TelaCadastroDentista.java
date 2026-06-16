@@ -77,13 +77,11 @@ public TelaCadastroDentista(SistemaAgendamento sistema){
                 "Dentista cadastrado com sucesso"
             );
         }catch (Exception e){
-            JOptionPane.showMessageDialog(
                 JOptionPane.showMessageDialog(this,
                     e.getMessage(),
                     "Erro",
                     JOptionPane.ERROR_MESSAGE
                 );
-            );
         }
     }
 }
