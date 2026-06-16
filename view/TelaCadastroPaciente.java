@@ -29,18 +29,40 @@ public class TelaCadastroPaciente extends JFrame {
         setLayout(new GridLayout(8,2));
         add(new JLabel("ID: "));
         txtId = new JTextField();
+        add(txtId);
 
         add(new JLabel("Nome: "));
         txtNome = new JTextField();
+        add(txtNome);
 
         add(new JLabel("Telefone: "));
         txtTelefone = new JTextField();
+        add(txtTelefone);
+
+         add(new JLabel("Email: "));
+        txtEmail = new JTextField();
+        add(txtEmail);
 
         add(new JLabel("CPF: "));
         txtCpf = new JTextField();
+        add(txtCpf);
 
         add(new JLabel("Nascimento: "));
         txtNascimento = new JTextField();
+        add(txtNascimento);
+
+        add(new JLabel("Endereco: "));
+        txtEndereco = new JTextField();
+        add(txtEndereco);
+
+        add(new JLabel("Cadastrar: "));
+        add(btnCadastrar);
+
+        btnCadastrar.addActionListener(e -> cadastrarPaciente());
+        setVisible(true);
+    }
+
+    private void cadastrarPaciente(){
         
     }
 }
