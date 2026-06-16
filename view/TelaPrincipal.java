@@ -24,5 +24,13 @@ public class TelaPrincipal extends JFrame{
         btnHorario = new JButton("Cadastrar Horario");
         btnConsulta = new JButton("Agendar Consulta");
         btnListar = new JButton("Cadastrar Paciente");
+        btnSair = new JButton("Sair");
+
+        add(btnPaciente);
+        add(btnDentista);
+        add(btnHorario);
+        add(btnListar);
+        add(btnConsulta);
+        add(btnSair);
     }
 }
