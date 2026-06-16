@@ -42,7 +42,7 @@ public class TelaPrincipal extends JFrame{
         btnSair.addActionListener(e -> System.exit(0));
         btnPaciente.addActionListener( e -> new TelaCadastroPaciente(sistema));
         btnDentista.addActionListener(e -> new TelaCadastroDentista(sistema));
-        
+        btnHorario.addActionListener(e -> new TelaCadastroHorario(sistema));
 
         painel.add(Box.createVerticalStrut(20));
         painel.add(titulo);
