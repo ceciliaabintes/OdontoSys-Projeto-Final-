@@ -66,10 +66,21 @@ public class TelaAgendarConsulta extends JFrame {
         btnAgendar = new JButton("Agendar Consulta");
         add(btnAgendar);
 
+        agendarConsulta();
+
         btnAgendar.addActionListener(e -> agendarConsulta());
         setVisible(true);
     }
     private void agendarConsulta(){
+        try{
+            int id = Integer.parseInt(txtIdConsulta.getText());
+            Paciente paciente = (Paciente) cbPaciente.getSelectedItem();
+            Dentista dentista = (Dentista) cbDentista.getSelectedItem();
+            Horario horario = (Horario) cbHorario.getSelectedItem();
+            Consulta consulta = new Consulta(id, horario.toString(),txtIdConsulta.getText(),txtObservacoes.getText());
+            
+        }catch(Exception e){
 
+        }
     }
 }
