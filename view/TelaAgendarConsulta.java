@@ -78,9 +78,16 @@ public class TelaAgendarConsulta extends JFrame {
             Dentista dentista = (Dentista) cbDentista.getSelectedItem();
             Horario horario = (Horario) cbHorario.getSelectedItem();
             Consulta consulta = new Consulta(id, horario.toString(),txtIdConsulta.getText(),txtObservacoes.getText());
-            
-        }catch(Exception e){
 
+            boolean isSuccessful = sistema.agendarConsulta(consulta, paciente, dentista, horario);
+
+            if(isSuccessful){
+                JOptionPane.showMessageDialog(this, "Consulta agendada com sucesso");
+            }else{
+                JOptionPane.showMessageDialog(this, "Falha no agendamento");
+            }
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(this, e.getMessage(), "ERRO", JOptionPane.ERROR_MESSAGE);
         }
     }
 }
