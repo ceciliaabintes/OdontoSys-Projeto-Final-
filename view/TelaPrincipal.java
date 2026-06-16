@@ -18,7 +18,7 @@ public class TelaPrincipal extends JFrame{
         JPanel painel = new JPanel();
         painel.setLayout(new BoxLayout(painel, BoxLayout.Y_AXIS));
 
-        JLabel titulo = new JLabel("Sistema para Agendamento de Consulta");
+        JLabel titulo = new JLabel("Sistema para Agendamento de Consultas");
 
 
         btnPaciente = new JButton("Cadastrar Paciente");
@@ -28,13 +28,15 @@ public class TelaPrincipal extends JFrame{
         btnListar = new JButton("Cadastrar Paciente");
         btnSair = new JButton("Sair");
 
-        add(btnPaciente);
-        add(btnDentista);
-        add(btnHorario);
-        add(btnListar);
-        add(btnConsulta);
-        add(btnSair);
+        btnPaciente.setAlignmentX(CENTER_ALIGNMENT);
+        btnDentista.setAlignmentX(CENTER_ALIGNMENT);
+        btnHorario.setAlignmentX(CENTER_ALIGNMENT);
+        btnConsulta.setAlignmentX(CENTER_ALIGNMENT);
+        btnListar.setAlignmentX(CENTER_ALIGNMENT);
+        btnSair.setAlignmentX(CENTER_ALIGNMENT);
 
+        painel.add(Box.createVerticalStrut(20));
+        painel.add(titulo);
         btnSair.addActionListener(e -> System.exit(0));
         setVisible(true);
     }
