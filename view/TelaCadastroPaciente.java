@@ -7,5 +7,16 @@ import service.SistemaAgendamento;
 public class TelaCadastroPaciente extends JFrame {
     private SistemaAgendamento sistema;
 
-    private JTextField txtI
+    private JTextField txtId;
+    private JTextField txtNome;
+    private JTextField txtTelefone;
+    private JTextField txtEmail;
+    private JTextField txtCpf;
+    private JTextField txtEndereco;
+
+    private JButton btnCadastrar;
+
+    public TelaCadastroPaciente(Sistema sistema){
+
+    }
 }
