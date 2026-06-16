@@ -37,6 +37,22 @@ public class TelaPrincipal extends JFrame{
 
         painel.add(Box.createVerticalStrut(20));
         painel.add(titulo);
+        painel.add(Box.createVerticalStrut(20));
+
+        painel.add(btnPaciente);
+        painel.add(Box.createHorizontalStrut(20));
+
+        painel.add(btnDentista);
+        painel.add(Box.createHorizontalStrut(10));
+
+        painel.add(btnHorario);
+        painel.add(Box.createHorizontalStrut(10));
+
+         painel.add(btnConsulta);
+        painel.add(Box.createHorizontalStrut(10));
+
+        
+
         btnSair.addActionListener(e -> System.exit(0));
         setVisible(true);
     }
