@@ -34,6 +34,6 @@ public class TelaListarConsultas extends JFrame {
         setVisible(true);
     }
     private void carregaConsultas(){
-        
+
     }
 }
