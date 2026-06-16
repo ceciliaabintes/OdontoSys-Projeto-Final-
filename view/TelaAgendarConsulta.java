@@ -66,7 +66,7 @@ public class TelaAgendarConsulta extends JFrame {
         btnAgendar = new JButton("Agendar Consulta");
         add(btnAgendar);
 
-        agendarConsulta();
+        carregarDados();
 
         btnAgendar.addActionListener(e -> agendarConsulta());
         setVisible(true);
