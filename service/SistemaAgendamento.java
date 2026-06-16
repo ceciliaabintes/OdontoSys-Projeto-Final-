@@ -24,8 +24,15 @@ public class SistemaAgendamento {
     public List<Horario> getHorarios(){
         return horarios;
     }
-    public List<Pessoa> getPessoas(){
-        return pessoas;
+    public List<Paciente> getPacientes(){
+        List<Paciente> pacientes = new ArrayList<>();
+        for(Pessoa pessoa : pessoas){
+            //testando a instancia e verificando se ela pertence a classe pessoa
+            if(pessoa instanceof Paciente){
+                pacientes.add((Paciente) pessoa);
+            }
+        }
+            return pacientes;
     }
     public List<Consulta> getConsultas(){
         return consultas;
