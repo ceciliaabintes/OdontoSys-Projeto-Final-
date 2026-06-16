@@ -1,6 +1,9 @@
+import service.SistemaAgendamento;
 import view.TelaPrincipal;
 public class Main {
     public static void main(String[] args) {
-        new TelaPrincipal();
+        SistemaAgendamento sistema = new SistemaAgendamento();
+
+        new TelaPrincipal(sistema);
     }
 }

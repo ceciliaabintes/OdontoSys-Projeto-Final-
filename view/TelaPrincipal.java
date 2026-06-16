@@ -1,7 +1,10 @@
 package view;
 import javax.swing.*;
-import java.awt.*;
+import service.SistemaAgendamento;
 public class TelaPrincipal extends JFrame{
+
+    private SistemaAgendamento sistema;
+
     private JButton btnPaciente;
     private JButton btnDentista;
     private JButton btnHorario;
@@ -9,7 +12,8 @@ public class TelaPrincipal extends JFrame{
     private JButton btnListar;
     private JButton btnSair;
 
-    public TelaPrincipal(){
+    public TelaPrincipal(SistemaAgendamento sistema){
+        this.sistema = sistema;
         setTitle("OdontoSys");
         setSize(400, 500);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
