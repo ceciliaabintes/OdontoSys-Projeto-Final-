@@ -12,12 +12,14 @@ public class TelaPrincipal extends JFrame{
     public TelaPrincipal(){
         setTitle("OdontoSys");
         setSize(900, 700);
-
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
         setLocationRelativeTo(null);
 
-        setLayout(new GridLayout (6,1,10,10));
+        JPanel painel = new JPanel();
+        painel.setLayout(new BoxLayout(painel, BoxLayout.Y_AXIS));
+
+        JLabel titulo = new JLabel("Sistema para Agendamento de Consulta");
+
 
         btnPaciente = new JButton("Cadastrar Paciente");
         btnDentista = new JButton("Cadastrar Dentista");
