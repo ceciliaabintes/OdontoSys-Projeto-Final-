@@ -46,4 +46,8 @@ public class Dentista extends Pessoa {
         public List<Horario> getHorarios(){
             return horarios;
         }
+        @Override
+        public String toString(){
+            return getNome();
+        }
 }

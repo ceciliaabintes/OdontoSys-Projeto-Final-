@@ -48,4 +48,9 @@ public class Paciente extends Pessoa {
         "\nEmail: " + getEmail() +
         "\nEndereço: " + this.endereco;
     }
+
+     @Override
+        public String toString(){
+            return getNome();
+        }
 }
