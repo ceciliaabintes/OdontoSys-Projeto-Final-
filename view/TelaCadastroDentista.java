@@ -51,6 +51,14 @@ public TelaCadastroDentista(SistemaAgendamento sistema){
         txtEspecialidade = new JTextField();
         add(txtEspecialidade);
 
-        
+        btnSalvar = new JButton("Salvar Dentista");
+        add(btnSalvar);
+
+         btnSalvar.addActionListener(e -> cadastrarDentista());
+
+         setVisible(true);
+    }
+    private void cadastrarDentista(){
+
     }
 }
