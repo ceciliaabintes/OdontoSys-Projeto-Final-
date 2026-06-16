@@ -32,5 +32,8 @@ public class TelaPrincipal extends JFrame{
         add(btnListar);
         add(btnConsulta);
         add(btnSair);
+
+        btnSair.addActionListener(e -> System.exit(0));
+        setVisible(true);
     }
 }
