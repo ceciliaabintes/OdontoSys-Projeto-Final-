@@ -47,5 +47,17 @@ public class TelaAgendarConsulta extends JFrame {
         add(new JLabel("Tipo Consulta"));
         txtTipoConsulta = new JTextField();
         add(txtTipoConsulta);
+        add(new JLabel("Observações: "));
+        txtObservacoes = new JTextArea();
+        add(new JScrollPane(txtObservacoes));
+
+        btnAgendar = new JButton("Agendar Consulta");
+        add(btnAgendar);
+
+        btnAgendar.addActionListener(e -> agendarConsulta());
+        setVisible(true);
+    }
+    private void agendarConsulta(){
+
     }
 }
