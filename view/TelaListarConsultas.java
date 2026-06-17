@@ -28,12 +28,12 @@ public class TelaListarConsultas extends JFrame {
         modelo.addColumn("Status");
 
         table = new JTable(modelo);
-        carregaConsultas();
+        carregarConsultas();
 
         add(new JScrollPane(table));
         setVisible(true);
     }
-    private void carregaConsultas(){
+    private void carregarConsultas(){
         for(Consulta consulta : sistema.getConsultas()){
             modelo.addRow(new Object[]{
                 consulta.getIdConsulta(),

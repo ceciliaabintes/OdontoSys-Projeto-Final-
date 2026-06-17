@@ -77,7 +77,7 @@ public class TelaAgendarConsulta extends JFrame {
             Paciente paciente = (Paciente) cbPaciente.getSelectedItem();
             Dentista dentista = (Dentista) cbDentista.getSelectedItem();
             Horario horario = (Horario) cbHorario.getSelectedItem();
-            Consulta consulta = new Consulta(id, horario.toString(),txtIdConsulta.getText(),txtObservacoes.getText());
+            Consulta consulta = new Consulta(id, horario.toString(),txtTipoConsulta.getText(),txtObservacoes.getText());
 
             boolean isSuccessful = sistema.agendarConsulta(consulta, paciente, dentista, horario);
 
