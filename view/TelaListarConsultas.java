@@ -34,6 +34,14 @@ public class TelaListarConsultas extends JFrame {
         setVisible(true);
     }
     private void carregaConsultas(){
-
+        for(Consulta consulta : sistema.getConsultas()){
+            modelo.addRow(new Object[]{
+                consulta.getIdConsulta(),
+                consulta.getPaciente().getNome(),
+                consulta.getDentista().getNome(),
+                consulta.getTipoConsulta(),
+                consulta.getStatus()
+            });
+        }
     }
 }
