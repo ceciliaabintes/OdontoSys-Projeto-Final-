@@ -23,6 +23,21 @@ public class TelaGerenciarConsultas extends JFrame{
         add(txtIdConsulta);
 
         btnConfirmar = new JButton("Confirmar");
-   }    
+        add(btnConfirmar);
 
+        btnCancelar = new JButton("Cancelar");
+        add(btnCancelar);
+        btnConfirmar.addActionListener(e -> confirmar());
+        btnCancelar.addActionListener(e -> cancelar());
+
+        setVisible(true);
+
+   }    
+   private void confirmar(){
+    try{
+        int id = Integer.parseInt(txtIdConsulta.getText());
+        boolean sucess = sistema.confirmarConsulta(id;)
+    }
+   }
+   private void cancelar(){}
 }
