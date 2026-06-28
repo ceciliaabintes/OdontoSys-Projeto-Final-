@@ -35,4 +35,19 @@ public class TelaListarPacientes extends JFrame{
 
         setVisible(true);
     }
+    private void carregarPacientes(){
+
+        modelo.setRowCount(0);
+
+        for(Paciente paciente : sistema.getPacientes()){
+
+            modelo.addRow(new Object[]{
+                paciente.getId(),
+                paciente.getNome(),
+                paciente.getCpf(),
+                paciente.getTelefone(),
+                paciente.getEmail()
+            });
+        }
+    }
 }
