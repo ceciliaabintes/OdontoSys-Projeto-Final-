@@ -36,8 +36,29 @@ public class TelaGerenciarConsultas extends JFrame{
    private void confirmar(){
     try{
         int id = Integer.parseInt(txtIdConsulta.getText());
-        boolean sucess = sistema.confirmarConsulta(id;)
-    }
+        boolean sucess = sistema.confirmarConsulta(id);
+        if(sucess){
+            JOptionPane.showMessageDialog(this, "Consulta confirmada");
+        }else{
+            JOptionPane.showMessageDialog(this, "Consulta não encontrada");
+
+            }
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(this, e.getMessage());
+        }
    }
-   private void cancelar(){}
+   private void cancelar(){
+    try{
+        int id = Integer.parseInt(txtIdConsulta.getText());
+        boolean sucess = sistema.cancelarConsulta(id);
+        if(sucess){
+            JOptionPane.showMessageDialog(this, "Consulta cancelada");
+        }else{
+            JOptionPane.showMessageDialog(this, "Consulta não encontrada");
+
+            }
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(this, e.getMessage());
+        }
+   }
 }
