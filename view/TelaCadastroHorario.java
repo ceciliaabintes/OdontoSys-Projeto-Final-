@@ -59,12 +59,15 @@ public class TelaCadastroHorario extends JFrame {
                     txtHoraFim.getText(),
                     true
                 );
-            sistema.adicionarHorario(horario);
-            JOptionPane.showMessageDialog(
-                this,
-                "Horario cadastrado com sucesso"
-            );
-
+            if(Integer.parseInt(txtHoraInicio.getText())>=0 && Integer.parseInt(txtHoraFim.getText())<=23){
+                sistema.adicionarHorario(horario);
+                JOptionPane.showMessageDialog(
+                    this,
+                    "Horario cadastrado com sucesso"
+                );
+            }else{
+                JOptionPane.showMessageDialog(this, "A hora deve ser entre 0 a 23");
+            }
         }catch(Exception e ){
             JOptionPane.showMessageDialog(
                 this,
