@@ -54,7 +54,15 @@ public class SistemaAgendamento {
     public void adicionarHorario(Horario horario){
         horarios.add(horario);
     }
-    
+    public boolean confirmarConsulta(int idConsulta){
+        for(Consulta consulta : consultas){
+            if(consulta.getIdConsulta() == idConsulta){
+                consulta.confirmar();
+                return true;
+            }
+        }
+            return false;
+    }
     public boolean agendarConsulta(Consulta consulta, Paciente paciente, Dentista dentista, Horario horario){
         validadores.clear();
         validadores.add(new ValidadorPaciente(paciente));
