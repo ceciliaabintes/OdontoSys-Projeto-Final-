@@ -63,6 +63,15 @@ public class SistemaAgendamento {
         }
             return false;
     }
+    public boolean cancelarConsulta(int idConsulta){
+            for(Consulta consulta : consultas){
+                if (consulta.getIdConsulta() == idConsulta) {
+                    consulta.cancelar();
+                    return true;
+                }
+            }
+            return false;
+    }
     public boolean agendarConsulta(Consulta consulta, Paciente paciente, Dentista dentista, Horario horario){
         validadores.clear();
         validadores.add(new ValidadorPaciente(paciente));
