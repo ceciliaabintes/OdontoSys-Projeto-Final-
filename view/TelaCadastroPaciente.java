@@ -65,6 +65,12 @@ public class TelaCadastroPaciente extends JFrame {
     private void cadastrarPaciente(){
         try{
             int id = Integer.parseInt(txtId.getText());
+                for(Paciente paciente : sistema.getPacientes()){
+                    if(paciente.getId() == id){
+                        JOptionPane.showMessageDialog(this, "ERRO: Já existe um paciente com esse ID");
+                        return;
+                    }
+                }
 
             Paciente paciente = new Paciente(id, 
                 txtNome.getText(),

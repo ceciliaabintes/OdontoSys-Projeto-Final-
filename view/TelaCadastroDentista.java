@@ -2,6 +2,7 @@ package view;
 import javax.swing.*;
 import java.awt.*;
 
+import model.Consulta;
 import model.Dentista;
 import service.SistemaAgendamento;
 
@@ -61,7 +62,12 @@ public TelaCadastroDentista(SistemaAgendamento sistema){
     private void cadastrarDentista(){
         try{
             int id = Integer.parseInt(txtId.getText());
-
+                for(Consulta consulta : sistema.getConsultas()){
+                    if (consulta.getIdConsulta() == id) {
+                        JOptionPane.showMessageDialog(this, "ERRO: Já existe uma consulta com esse ID");
+                        return;
+                    }
+                }
             Dentista dentista = new Dentista (id, 
                 txtNome.getText(),
                 txtTelefone.getText(),

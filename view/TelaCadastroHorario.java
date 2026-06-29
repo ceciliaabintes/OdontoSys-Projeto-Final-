@@ -51,6 +51,12 @@ public class TelaCadastroHorario extends JFrame {
         try{
 
             int id = Integer.parseInt(txtId.getText());
+                for(Horario horario : sistema.getHorarios()){
+                    if(horario.getIdHorario() == id){
+                        JOptionPane.showMessageDialog(this, "Erro: Já existe horário com esse ID");
+                        return;
+                    }
+                }
 
             Horario horario = new Horario(
                     id,
