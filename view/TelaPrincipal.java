@@ -1,5 +1,6 @@
 package view;
 import javax.swing.*;
+import java.awt.Font;
 import service.SistemaAgendamento;
 public class TelaPrincipal extends JFrame{
 
@@ -16,6 +17,8 @@ public class TelaPrincipal extends JFrame{
     private JButton btnSair;
 
     public TelaPrincipal(SistemaAgendamento sistema){
+        Font fonteTitulo = new Font("Segoe UI", Font.BOLD, 18);
+        Font fonteBotao = new Font("Segoe UI", Font.PLAIN, 14);
         this.sistema = sistema;
         setTitle("OdontoSys");
         setSize(400, 550);
@@ -38,6 +41,11 @@ public class TelaPrincipal extends JFrame{
         btnSair = new JButton("Sair");
         btnGerenciarConsultas = new JButton("Gerenciar Consulta");
 
+        JButton[] todosBotoes = {
+            btnPaciente, btnListarPacientes, btnDentista, btnListarDentistas, 
+            btnHorario, btnConsulta, btnListar, btnGerenciarConsultas, btnSair
+        }
+
         btnPaciente.setAlignmentX(CENTER_ALIGNMENT);
         btnDentista.setAlignmentX(CENTER_ALIGNMENT);
         btnHorario.setAlignmentX(CENTER_ALIGNMENT);
@@ -57,30 +65,30 @@ public class TelaPrincipal extends JFrame{
 
         painel.add(Box.createVerticalStrut(20));
         painel.add(titulo);
-        painel.add(Box.createVerticalStrut(20));
+        painel.add(Box.createVerticalStrut(25));
 
         painel.add(btnPaciente);
-        painel.add(Box.createHorizontalStrut(15));
+        painel.add(Box.createHorizontalStrut(10));
 
         painel.add(btnListarPacientes);
-        painel.add(Box.createHorizontalStrut(15));
+        painel.add(Box.createHorizontalStrut(10));
 
         painel.add(btnDentista);
-        painel.add(Box.createHorizontalStrut(15));
+        painel.add(Box.createHorizontalStrut(10));
+
+         painel.add(btnListarDentistas);
+        painel.add(Box.createHorizontalStrut(10));
 
         painel.add(btnHorario);
-        painel.add(Box.createHorizontalStrut(15));
+        painel.add(Box.createHorizontalStrut(10));
 
         painel.add(btnConsulta);
-        painel.add(Box.createHorizontalStrut(15));
+        painel.add(Box.createHorizontalStrut(10));
 
         painel.add(btnListar);
-        painel.add(Box.createHorizontalStrut(15));
+        painel.add(Box.createHorizontalStrut(10));
 
         painel.add(btnGerenciarConsultas);
-        painel.add(Box.createHorizontalStrut(20));
-
-        painel.add(btnListarDentistas);
         painel.add(Box.createHorizontalStrut(20));
 
         painel.add(btnSair);
