@@ -1,20 +1,8 @@
 # OdontoSys
 
 O OdontoSys é uma aplicação desenvolvida para otimizar o fluxo de agendamentos de consultas em clínicas odontológicas. O sistema visa facilitar o fluxo de agendamentos dos horários de atendimento dos dentistas, possibilitando o cadastro de pacientes evitando conflito de agendas e substituindo processos manuaus por uma solução digital integrada.
-<<<<<<< HEAD
-
-# OdontoSys
-
-O OdontoSys é uma aplicação desenvolvida para otimizar o fluxo de agendamentos de consultas em clínicas odontológicas. O sistema visa facilitar o fluxo de agendamentos dos horários de atendimento dos dentistas, possibilitando o cadastro de pacientes evitando conflito de agendas e substituindo processos manuaus por uma solução digital integrada.
 
 ```
----
-config:
-  layout: elk
----
-=======
-```
->>>>>>> 29c43daf71ea545842c595504fb020cf8fc8dd01
 classDiagram
     direction TB
 
@@ -197,7 +185,3 @@ classDiagram
     Main "1" ..> "1" SistemaAgendamento : "Cria instância do SistemaAgendamento"
     Main "1" ..> "1" TelaPrincipal : "Abre a TelaPrincipal"
 ```
-<<<<<<< HEAD
-
-=======
->>>>>>> 29c43daf71ea545842c595504fb020cf8fc8dd01
