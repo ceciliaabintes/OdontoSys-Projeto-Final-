@@ -6,6 +6,7 @@ public class TelaPrincipal extends JFrame{
     private SistemaAgendamento sistema;
 
     private JButton btnPaciente;
+    private JButton btnListarPacientes;
     private JButton btnDentista;
     private JButton btnHorario;
     private JButton btnConsulta;
@@ -27,6 +28,7 @@ public class TelaPrincipal extends JFrame{
 
 
         btnPaciente = new JButton("Cadastrar Paciente");
+        btnListarPacientes = new JButton("Listar Pacientes");
         btnDentista = new JButton("Cadastrar Dentista");
         btnHorario = new JButton("Cadastrar Horario");
         btnConsulta = new JButton("Agendar Consulta");
@@ -43,6 +45,7 @@ public class TelaPrincipal extends JFrame{
 
         btnSair.addActionListener(e -> System.exit(0));
         btnPaciente.addActionListener( e -> new TelaCadastroPaciente(sistema));
+        btnListarPacientes.addActionListener(e ->{new TelaListarPacientes(sistema);});
         btnDentista.addActionListener(e -> new TelaCadastroDentista(sistema));
         btnHorario.addActionListener(e -> new TelaCadastroHorario(sistema));
         btnConsulta.addActionListener(e -> new TelaAgendarConsulta(sistema));
@@ -54,6 +57,9 @@ public class TelaPrincipal extends JFrame{
         painel.add(Box.createVerticalStrut(20));
 
         painel.add(btnPaciente);
+        painel.add(Box.createHorizontalStrut(15));
+
+        painel.add(btnListarPacientes);
         painel.add(Box.createHorizontalStrut(15));
 
         painel.add(btnDentista);
@@ -69,7 +75,7 @@ public class TelaPrincipal extends JFrame{
         painel.add(Box.createHorizontalStrut(15));
 
         painel.add(btnGerenciarConsultas);
-        painel.add(Box.createHorizontalStrut(15));
+        painel.add(Box.createHorizontalStrut(20));
 
         painel.add(btnSair);
 
