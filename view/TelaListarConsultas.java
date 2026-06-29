@@ -24,8 +24,10 @@ public class TelaListarConsultas extends JFrame {
         modelo.addColumn("ID");
         modelo.addColumn("Paciente");
         modelo.addColumn("Dentista");
+        modelo.addColumn("Horário");
         modelo.addColumn("Tipo");
         modelo.addColumn("Status");
+        modelo.addColumn("Observações");
 
         table = new JTable(modelo);
         carregarConsultas();
@@ -39,8 +41,10 @@ public class TelaListarConsultas extends JFrame {
                 consulta.getIdConsulta(),
                 consulta.getPaciente().getNome(),
                 consulta.getDentista().getNome(),
+                consulta.getHorario(),
                 consulta.getTipoConsulta(),
-                consulta.getStatus()
+                consulta.getStatus(),
+                consulta.getObservacoes()
             });
         }
     }
