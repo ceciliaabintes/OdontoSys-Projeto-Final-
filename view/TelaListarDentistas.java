@@ -16,5 +16,21 @@ public class TelaListarDentistas extends JFrame{
         setTitle("Dentistas Cadastrados");
         setSize(800,400);
         setLocationRelativeTo(null);
+
+        modelo = new DefaultTableModel();
+
+        modelo.addColumn("ID");
+        modelo.addColumn("Nome");
+        modelo.addColumn("CRO");
+        modelo.addColumn("Especialidade");
+        modelo.addColumn("Telefone");
+
+        tabela = new JTable(modelo);
+
+        carregarDentistas();
+        add();
+    }
+    public void carregarDentistas(){
+
     }
 }
