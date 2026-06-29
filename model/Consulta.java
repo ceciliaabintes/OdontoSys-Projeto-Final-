@@ -80,7 +80,7 @@ public class Consulta {
         return "Consulta nº: " + idConsulta +
         "\nPaciente: " + paciente.getNome() +
         "\nDentista: " + dentista.getNome() +
-        "\nData/Hora: " + dataHora + //Talvez essa linha não esteja de acordo com a lógica de negócios verificar dps
+        "\nData/Hora: " + dataHora + 
         "\nTipo: " + tipoConsulta +
         "\nStatus: " + status +
         "\nObservações: " + observacoes;
