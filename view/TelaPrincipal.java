@@ -19,9 +19,12 @@ public class TelaPrincipal extends JFrame{
     public TelaPrincipal(SistemaAgendamento sistema){
         Font fonteTitulo = new Font("Segoe UI", Font.BOLD, 18);
         Font fonteBotao = new Font("Segoe UI", Font.PLAIN, 14);
+
+        java.awt.Dimension tamanhoBotao = new java.awt.Dimension(220, 35);
+
         this.sistema = sistema;
         setTitle("OdontoSys");
-        setSize(400, 550);
+        setSize(490, 580);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
 
@@ -29,7 +32,8 @@ public class TelaPrincipal extends JFrame{
         painel.setLayout(new BoxLayout(painel, BoxLayout.Y_AXIS));
 
         JLabel titulo = new JLabel("Sistema para Agendamento de Consultas");
-
+        titulo.setFont(fonteTitulo);
+        titulo.setAlignmentX(CENTER_ALIGNMENT);
 
         btnPaciente = new JButton("Cadastrar Paciente");
         btnListarPacientes = new JButton("Listar Pacientes");
@@ -44,14 +48,16 @@ public class TelaPrincipal extends JFrame{
         JButton[] todosBotoes = {
             btnPaciente, btnListarPacientes, btnDentista, btnListarDentistas, 
             btnHorario, btnConsulta, btnListar, btnGerenciarConsultas, btnSair
-        }
+        };
 
-        btnPaciente.setAlignmentX(CENTER_ALIGNMENT);
-        btnDentista.setAlignmentX(CENTER_ALIGNMENT);
-        btnHorario.setAlignmentX(CENTER_ALIGNMENT);
-        btnConsulta.setAlignmentX(CENTER_ALIGNMENT);
-        btnListar.setAlignmentX(CENTER_ALIGNMENT);
-        btnSair.setAlignmentX(CENTER_ALIGNMENT);
+       for(JButton btn : todosBotoes){
+            btn.setFont(fonteBotao);
+            btn.setPreferredSize(tamanhoBotao);
+            btn.setMinimumSize(tamanhoBotao);
+            btn.setMaximumSize(tamanhoBotao);
+            btn.setAlignmentX(CENTER_ALIGNMENT);
+            btn.setFocusPainted(false);
+        }
 
         btnSair.addActionListener(e -> System.exit(0));
         btnPaciente.addActionListener( e -> new TelaCadastroPaciente(sistema));
@@ -68,28 +74,28 @@ public class TelaPrincipal extends JFrame{
         painel.add(Box.createVerticalStrut(25));
 
         painel.add(btnPaciente);
-        painel.add(Box.createHorizontalStrut(10));
+        painel.add(Box.createVerticalStrut(10));
 
         painel.add(btnListarPacientes);
-        painel.add(Box.createHorizontalStrut(10));
+        painel.add(Box.createVerticalStrut(10));
 
         painel.add(btnDentista);
-        painel.add(Box.createHorizontalStrut(10));
+        painel.add(Box.createVerticalStrut(10));
 
          painel.add(btnListarDentistas);
-        painel.add(Box.createHorizontalStrut(10));
+        painel.add(Box.createVerticalStrut(10));
 
         painel.add(btnHorario);
-        painel.add(Box.createHorizontalStrut(10));
+        painel.add(Box.createVerticalStrut(10));
 
         painel.add(btnConsulta);
-        painel.add(Box.createHorizontalStrut(10));
+        painel.add(Box.createVerticalStrut(10));
 
         painel.add(btnListar);
-        painel.add(Box.createHorizontalStrut(10));
+        painel.add(Box.createVerticalStrut(10));
 
         painel.add(btnGerenciarConsultas);
-        painel.add(Box.createHorizontalStrut(20));
+        painel.add(Box.createVerticalStrut(20));
 
         painel.add(btnSair);
 
