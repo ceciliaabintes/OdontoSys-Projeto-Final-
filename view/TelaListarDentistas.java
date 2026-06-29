@@ -28,9 +28,21 @@ public class TelaListarDentistas extends JFrame{
         tabela = new JTable(modelo);
 
         carregarDentistas();
-        add();
+        add(new JScrollPane(tabela));
+
+        setVisible(true);
     }
     public void carregarDentistas(){
+        modelo.setRowCount(0);
 
+        for(Dentista dentista : sistema.getDentistas()){
+            modelo.addRow(new Object[]{
+                dentista.getId(),
+                dentista.getNome(),
+                dentista.getCro(),
+                dentista.getEspecialidade(),
+                dentista.getTelefone()
+            });
+        }
     }
 }
