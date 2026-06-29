@@ -184,4 +184,4 @@ classDiagram
     %% Fluxo inicial
     Main "1" ..> "1" SistemaAgendamento : "Cria instância do SistemaAgendamento"
     Main "1" ..> "1" TelaPrincipal : "Abre a TelaPrincipal"
-```
+
