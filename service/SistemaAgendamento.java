@@ -7,14 +7,14 @@ import model.Pessoa;
 import model.Horario;
 import model.Paciente;
 import model.Dentista;
-/*Classe Sistema Agendamento */
+/** Classe Sistema Agendamento */
 public class SistemaAgendamento {
-    /*Atributos de Sistema Agendamento */
+    /** Atributos de Sistema Agendamento */
     private List<Pessoa> pessoas;
     private List<Consulta> consultas;
     private List<IValidador> validadores;
     private List<Horario> horarios;
-    /* Construtor de Sistema Agendamento*/
+    /** Construtor de Sistema Agendamento*/
     public SistemaAgendamento(){
         pessoas = new ArrayList<>();
         consultas = new ArrayList<>();
@@ -25,7 +25,7 @@ public class SistemaAgendamento {
     public List<Horario> getHorarios(){
         return horarios;
     }
-    /*Método para retorno de Pacientes */
+    /** Método para retorno de Pacientes */
     public List<Paciente> getPacientes(){
         List<Paciente> pacientes = new ArrayList<>();
         for(Pessoa pessoa : pessoas){
@@ -36,7 +36,7 @@ public class SistemaAgendamento {
         }
             return pacientes;
     }
-    /*Método de retorno de Dentistas */
+    /** Método de retorno de Dentistas */
     public List<Dentista> getDentistas(){
         List<Dentista> dentistas = new ArrayList<>();
             for(Pessoa pessoa : pessoas){
@@ -46,19 +46,19 @@ public class SistemaAgendamento {
         }
             return dentistas;
     } 
-    /*Métod de retono de Consultas */
+    /** Método de retono de Consultas */
     public List<Consulta> getConsultas(){
         return consultas;
     }
-    /*Método para adicionar Pessoas */
+    /** Método para adicionar Pessoas */
     public void adicionarPessoa(Pessoa pessoa){
         pessoas.add(pessoa);
     }
-    /*Método para Adicionar Horarios */
+    /** Método para Adicionar Horarios */
     public void adicionarHorario(Horario horario){
         horarios.add(horario);
     }
-    /*Método de confirmação de consultas */
+    /** Método de confirmação de consultas */
     public boolean confirmarConsulta(int idConsulta){
         for(Consulta consulta : consultas){
             if(consulta.getIdConsulta() == idConsulta){
@@ -68,7 +68,7 @@ public class SistemaAgendamento {
         }
             return false;
     }
-    /*Método de cancelamento de Consultas */
+    /** Método de cancelamento de Consultas */
     public boolean cancelarConsulta(int idConsulta){
             for(Consulta consulta : consultas){
                 if (consulta.getIdConsulta() == idConsulta) {
@@ -78,7 +78,7 @@ public class SistemaAgendamento {
             }
             return false;
     }
-    /*Método de agendar Consultas */
+    /** Método de agendar Consultas */
     public boolean agendarConsulta(Consulta consulta, Paciente paciente, Dentista dentista, Horario horario){
         validadores.clear();
         validadores.add(new ValidadorPaciente(paciente));

@@ -1,5 +1,5 @@
 package model;
-/*Classe Horários que cria a instancia dos Horario da Consulta */
+/** Classe Horários que cria a instancia dos Horario da Consulta */
 public class Horario {
     /*Atribitos da Classe Horário */
     private int idHorario;
@@ -7,7 +7,7 @@ public class Horario {
     private String horaInicio;
     private String horaFim;
     private boolean disponivel;
-/*Construtor da Classe Horário */
+/** Construtor da Classe Horário */
     public Horario(int idHorario, String diaSemana, String horaInicio, String horaFim, boolean disponivel){
         //Tratamento de exceções
         if(diaSemana == null || diaSemana.isBlank()){
@@ -22,7 +22,7 @@ public class Horario {
         this.horaFim = horaFim;
         this.disponivel = disponivel;
     }
-/*Método get para retorno de data */
+/** Método get para retorno de data */
     public String getData(){
         return diaSemana;
     }
@@ -38,21 +38,21 @@ public class Horario {
     public String getHoraFim(){
         return horaFim;
     }
-/*Método de verificação de disponibilidade do horário */
+/** Método de verificação de disponibilidade do horário */
     public boolean isDisponivel(){
         return disponivel;
     }
-/*Sobreescrevendo o método toString para atender as parcularidades de retorno da classe Horario */
+/** Sobreescrevendo o método toString para atender as parcularidades de retorno da classe Horario */
     @Override
-/*Método de retorno das informações concatenadas e formatadas */
+/** Método de retorno das informações concatenadas e formatadas */
     public String toString(){
        return diaSemana + " | " + horaInicio + " às " + horaFim;
     }
-/*Método para bloquear o horario */
+/** Método para bloquear o horario */
     public void bloquear(){
        this.disponivel = false;
     }
-/*Metodo para liberar o horario */
+/** Metodo para liberar o horario */
     public void liberar(){
         this.disponivel = true;
     }

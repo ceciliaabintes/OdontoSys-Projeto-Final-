@@ -1,11 +1,11 @@
 package model;
-/*Classe Paciente que herda a classe pessoa */
+/** Classe Paciente que herda a classe pessoa */
 public class Paciente extends Pessoa {
-/*Atributos da classe Paciente */
+/** Atributos da classe Paciente */
     private String cpf;
     private String dataNascimento;
     private String endereco;
-/*Construtor da classe Paciente */
+/** Construtor da classe Paciente */
     public Paciente(int id, String nome, String telefone, String email, String cpf,
         String dataNascimento, String endereco){
             super(id, nome, telefone, email);
@@ -20,14 +20,14 @@ public class Paciente extends Pessoa {
             this.dataNascimento = dataNascimento;
             this.endereco = endereco;
     }
-/*Método para atualizar cadastro */
+/** Método para atualizar cadastro */
     public void atualizarCadastro(String novoNome,String novoTelefone, String novoEmail, String novoEndereco ){
             setNome(novoNome);
             setTelefone(novoTelefone);
             setEmail(novoEmail);
             this.endereco = novoEndereco;
     }
- /*Metodos getters(retorno de informações) */
+ /** Metodos getters(retorno de informações) */
     public String getCpf(){
         return cpf;
     }
@@ -37,9 +37,9 @@ public class Paciente extends Pessoa {
     public String getEndereco(){
         return endereco;
     }
-/*Sobreescrita do método getDados para atender as particularidades da Classe Paciente */
+/** Sobreescrita do método getDados para atender as particularidades da Classe Paciente */
     @Override
-/*Método de retorno das informações de paciente concatenadas */
+/** Método de retorno das informações de paciente concatenadas */
     public String getDados(){
         return "Paciente: " + getNome() +
         "\nCPF: " + this.cpf +

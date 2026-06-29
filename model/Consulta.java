@@ -1,17 +1,17 @@
 package model;
-/* Criação da classe Consulta */
+/** Criação da classe Consulta */
 public class Consulta {
-    /*Atributos da Classe Consulta */
+    /** Atributos da Classe Consulta */
     private int idConsulta;
     private String dataHora;
     private String tipoConsulta;
     private String status;
     private String observacoes;
-/* Associando objetos da classe Dentista, Paciente e Horário à Consulta */
+/** Associando objetos da classe Dentista, Paciente e Horário à Consulta */
     private Paciente paciente;
     private Dentista dentista;
     private Horario horario;
-/*Construtor da classe Consulta */
+/** Construtor da classe Consulta */
     public Consulta(int idConsulta, String dataHora, String tipoConsulta, String observacoes){
         this.idConsulta = idConsulta;
         this.dataHora = dataHora;
@@ -19,7 +19,7 @@ public class Consulta {
         this.observacoes = observacoes;
         this.status = "Pendente";
     }
-/*Método de agendamento de consultas */
+/** Método de agendamento de consultas */
     public void agendar(Paciente p, Dentista d, Horario h){
         this.dentista = d;
         this.paciente = p;
@@ -28,7 +28,7 @@ public class Consulta {
 
         this.status = "Agendada";
     }
-/*Métodos para cancelamento de Consultas */
+/** Métodos para cancelamento de Consultas */
     public void cancelar(){
         //Tratamento de exceções
         if(status.equals("Pendente")){
@@ -41,7 +41,7 @@ public class Consulta {
             horario.liberar();
         }
     }
-/*Métodos para confirmação de consultas */
+/** Métodos para confirmação de consultas */
     public void confirmar(){
         //Tratamento de exceções
         if(status.equals("Cancelado")){
@@ -50,7 +50,7 @@ public class Consulta {
         }
         this.status = "Confirmada";
     }
-/*Métodos get para retorno de dados da classe */
+/** Métodos get para retorno de dados da classe */
     public String getStatus(){
         return status;
     }
