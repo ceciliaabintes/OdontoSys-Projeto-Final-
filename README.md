@@ -188,3 +188,8 @@ classDiagram
     Main "1" ..> "1" SistemaAgendamento : "Cria instância do SistemaAgendamento"
     Main "1" ..> "1" TelaPrincipal : "Abre a TelaPrincipal"
 ```
+
+Como executar o projeto: 
+- Passo 1: Baixar o projeto pelo repositório.
+- Passo 2: Com o projeto instalado, basta executar o código da classe principal (Main.java).
+- Passo 3: Após a execução da classe dentro da IDE uma tela com o menu do sistema deve abrir.
