@@ -1,6 +1,8 @@
 # OdontoSys
 
-O OdontoSys é uma aplicação desenvolvida para otimizar o fluxo de agendamentos de consultas em clínicas odontológicas. O sistema visa facilitar o fluxo de agendamentos dos horários de atendimento dos dentistas, possibilitando o cadastro de pacientes evitando conflito de agendas e substituindo processos manuaus por uma solução digital integrada.
+O OdontoSys é uma aplicação desenvolvida para otimizar o fluxo de agendamentos de consultas em clínicas odontológicas. O sistema visa facilitar o fluxo de agendamentos dos horários de atendimento dos dentistas, possibilitando o cadastro de pacientes evitando conflito de agendas e substituindo processos manuais por uma solução digital integrada.
+
+# Diagrama de Classes do Projeto
 
 ``` mermaid
 ---
@@ -190,7 +192,7 @@ classDiagram
     Main "1" ..> "1" TelaPrincipal : "Abre a TelaPrincipal"
 ```
 
-Como executar o projeto: 
+# Como executar o projeto: 
 - Passo 1: Baixar o projeto pelo repositório.
 - Passo 2: Com o projeto instalado, basta executar o código da classe principal (Main.java).
 - Passo 3: Após a execução da classe dentro da IDE uma tela com o menu do sistema deve abrir.
